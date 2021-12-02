@@ -1,13 +1,9 @@
 fun main() {
-    fun part1(input: List<String>): Int {
-        var result = 0
-        input.windowed(2).forEach {
-            if (it.first().toInt() < it.last().toInt()) {
-                result++
-            }
+    fun part1(input: List<String>): Int =
+        input.windowed(2).count {
+            it.first().toInt() < it.last().toInt()
         }
-        return result
-    }
+
 
     fun part2(input: List<String>): Int {
         return input.size
