@@ -15,7 +15,7 @@ fun part1(input: List<String>): Int {
 fun part2(input: List<String>): Int {
     var oxygen: List<String> = input
     var co2: List<String> = input
-    for (idx in input[0].indices) {
+    input[0].indices.forEach { idx ->
         var zero = oxygen.count { it[idx] == '0' }
         var one = oxygen.size - zero
         if (oxygen.size > 1) {
